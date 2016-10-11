@@ -9,8 +9,14 @@ header, nav, main, footer{
 	display:block;
 }
 
+header{
+	text-align:center;
+}
+
 nav{
 	display:block;
+	border-style:solid;
+	border-radius:20px;
 }
 
 nav ul{
@@ -25,6 +31,20 @@ nav ul li{
 
 nav ul li a{
 	text-decoration:none;
+}
+
+main{
+	border-style:solid;
+	border-radius:10px;
+	padding:10px;
+	margin:10px;
+}
+
+footer{
+	border-style:solid;
+	border-radius:10px;
+	padding:10px;
+	margin:10px;
 }
 /* Media query for mobiler */
 @media (min-width: 320px) {

@@ -1,0 +1,14 @@
+/* Her kommer CSS */
+body{
+	position:relative;
+	width:50%;
+	height:50%;
+	margin: 0 auto;
+}
+header, nav, main, footer{
+	display:block;
+}
+
+nav ul{
+	text-decoration:none;
+}

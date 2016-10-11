@@ -5,11 +5,22 @@
 	body{
 	background-image:url(../bilder/bckSS.jpg)
 	}
-	div {
+	
+	.hamburgermeny{
+		display:inline-block;
+		cursor:pointer;
+	}
+	
+	.del1, .del2, .del3 {
     width: 35px;
     height: 5px;
     background-color: white;
     margin: 6px 0;
+}
+
+	.hamburgermeny:hover{
+		display:inline-block;
+		cursor:pointer;
 }
 	header, main, footer{
 	display:block;
@@ -27,7 +38,11 @@ header{
 
 	
 }
-
+@media (min-width: 400px) {
+	div {
+		display:none;
+	}
+}
 /* Media query for tablets */
 @media (min-width: 768px) {
 	div {

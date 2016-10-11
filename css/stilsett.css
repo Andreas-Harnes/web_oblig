@@ -5,10 +5,14 @@
 	body{
 	background-image:url(../bilder/bckSS.jpg)
 	}
-	
+	nav{
+		display:none;
+	}
 	.hamburgermeny{
 		display:inline-block;
 		cursor:pointer;
+		position:relative;
+		left:4%;
 	}
 	
 	.del1, .del2, .del3 {
@@ -22,6 +26,7 @@
 		display:inline-block;
 		cursor:pointer;
 }
+
 	header, main, footer{
 	display:block;
 }
@@ -29,6 +34,9 @@
 main, footer{
 	display:block;
 	background-color:white;
+	margin:10px;
+	border-radius:10px;
+	padding: 10px;
 }
 
 header{
@@ -39,15 +47,66 @@ header{
 	
 }
 @media (min-width: 400px) {
-	div {
+	.hamburgermeny {
 		display:none;
 	}
 }
 /* Media query for tablets */
 @media (min-width: 768px) {
-	div {
-		display:none;
-	}
+	body{
+	position:relative;
+	width:50%;
+	height:50%;
+	margin: 0 auto;
+	background-image:url(../bilder/bckSS.jpg)
+}
+header, nav, main, footer{
+	display:block;
+}
+
+nav, main, footer{
+	display:block;
+	background-color:white;
+}
+
+header{
+	text-align:center;
+}
+
+nav{
+	display:block;
+	border-style:solid;
+	border-radius:20px;
+}
+
+nav ul{
+	display:inline-block;
+	list-style-type:none;
+}
+
+nav ul li{
+	margin:0 auto;
+	display:inline-block;
+	padding:10px;
+}
+
+nav ul li a{
+	text-decoration:none;
+}
+
+main{
+	border-style:solid;
+	border-radius:10px;
+	padding:10px;
+	margin:10px;
+}
+
+footer{
+	border-style:solid;
+	border-radius:10px;
+	padding:10px;
+	margin:10px;
+}
 }
 
 /* Media query for laptoper */

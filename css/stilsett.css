@@ -4,9 +4,15 @@ body{
 	width:50%;
 	height:50%;
 	margin: 0 auto;
+	background-image:url(../bilder/bckSS.jpg)
 }
 header, nav, main, footer{
 	display:block;
+}
+
+nav, main, footer{
+	display:block;
+	background-color:white;
 }
 
 header{
@@ -27,6 +33,7 @@ nav ul{
 nav ul li{
 	margin:0 auto;
 	display:inline-block;
+	padding:10px;
 }
 
 nav ul li a{

@@ -9,6 +9,39 @@ header, nav, main, footer{
 	display:block;
 }
 
+nav{
+	display:block;
+}
+
 nav ul{
+	display:inline-block;
+	list-style-type:none;
+}
+
+nav ul li{
+	margin:0 auto;
+	display:inline-block;
+}
+
+nav ul li a{
 	text-decoration:none;
+}
+/* Media query for mobiler */
+@media (min-width: 320px) {
+
+}
+
+/* Media query for tablets */
+@media (min-width: 768px) {
+
+}
+
+/* Media query for laptoper */
+@media (min-width: 1024px) {
+
+}
+
+/* Media query for store skjermer */
+@media (min-width: 1920px) {
+
 }

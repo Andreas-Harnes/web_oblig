@@ -163,7 +163,7 @@
     }
     /* Media query for mobiler */
 
-    @media handheld and (max-width: 768px) {
+    @media (max-width: 768px) {
         .mobilnav {
             display: flex;
             align-items: center;
@@ -189,7 +189,7 @@
         }
     }
 
-    @media handheld and (min-width:768px) and (max-width: 1920px) {
+    @media (min-width:768px) and (max-width: 1920px) {
         #logo {
             width: 20%;
             max-width: 20em;

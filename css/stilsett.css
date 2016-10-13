@@ -1,173 +1,156 @@
-/* Her kommer CSS */
+@media screen {
+    * {
+        font-family: sans-serif;
+    }
+}
+
+#mainheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    min-width: 200px;
+    width: 100%;
+    height: auto;
+    background-color: #e6e6e6;
+}
+
+.subheader {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.mainsection {
+    /*samleboks for de øverste artikklene på siden*/
+    margin-bottom: 1em;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    background-color: #d9d9d9;
+}
+
+.produktsection {
+    /*samleboks for alle produktboksene*/
+    margin-bottom: 1em;
+    padding: 1em 0em 1em 0em;
+    align-items: stretch;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    background-color: #d9d9d9;
+}
+
+.mainarticle {
+    /*Øverste artikkel på siden */
+    margin-top: 0.5em;
+    width: 80%;
+    min-width: 17em;
+    max-width: 80em;
+}
+
+.produktarticle {
+    /*Alle produktbokser*/
+    flex: 1;
+    margin-top: 0.5em;
+    width: 30%;
+    max-width: 28em;
+    min-width: 17em;
+    border-radius: 5px;
+    outline: 2px auto #cccccc;
+    background-color: #e6e6e6;
+    transition: width 1s, box-shadow 0.5s;
+}
+
+#logo {
+    max-width: 20rem;
+    min-width: 10rem;
+    width: 30%;
+}
+
+#logo1 {
+    max-width: 10rem;
+    width: 10%;
+    min-width: 5rem;
+}
+
+#bilde {
+    display: flex;
+    max-width: 15rem;
+    width: 15%;
+    min-width: 10rem;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    background: #999999;
+    padding: 0.01em;
+    margin-bottom: 1em;
+}
+
+nav ul {
+    display: none;
+    min-width: 200px;
+    width: 90%;
+    padding: 0% 5% 0% 5%;
+}
+
+nav ul li {
+    display: inline;
+    list-style: none;
+    background-color: #737373;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 2px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+nav ul li:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
 
 /* Media query for mobiler */
-@media (min-width: 200px) {
-	body{
-	background-image:url(../bilder/bckSS.jpg)
-	}
-	nav{
-		display:none;
-	}
-	.hamburgermeny{
-		display:inline-block;
-		cursor:pointer;
-		position:relative;
-		left:4%;
-	}
-	
-	.del1, .del2, .del3 {
-    width: 35px;
-    height: 5px;
-    background-color: white;
-    margin: 6px 0;
+
+@media (max-width: 768px) {
+    .mobilnav {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .pcnav {
+        display: none;
+    }
 }
 
-	.hamburgermeny:hover{
-		display:inline-block;
-		cursor:pointer;
-}
-
-	header, main, footer{
-	display:block;
-}
-
-main, footer{
-	display:block;
-	background-color:white;
-	margin:10px;
-	border-radius:10px;
-	padding: 10px;
-}
-
-header{
-	text-align:center;
-	color:white;
-}
-
-	
-}
-@media (min-width: 400px) {
-	.hamburgermeny {
-		display:none;
-	}
-}
-/* Media query for tablets */
 @media (min-width: 768px) {
-	body{
-	position:relative;
-	width:50%;
-	height:50%;
-	margin: 0 auto;
-	background-image:url(../bilder/bckSS.jpg)
-}
-header, nav, main, footer{
-	display:block;
-}
-
-nav, main, footer{
-	display:block;
-	background-color:white;
-}
-
-header{
-	text-align:center;
-}
-
-nav{
-	display:block;
-	border-style:solid;
-	border-radius:20px;
-}
-
-nav ul{
-	display:inline-block;
-	list-style-type:none;
-}
-
-nav ul li{
-	margin:0 auto;
-	display:inline-block;
-	padding:10px;
-}
-
-nav ul li a{
-	text-decoration:none;
-}
-
-main{
-	border-style:solid;
-	border-radius:10px;
-	padding:10px;
-	margin:10px;
-}
-
-footer{
-	border-style:solid;
-	border-radius:10px;
-	padding:10px;
-	margin:10px;
-}
-}
-
-/* Media query for laptoper */
-@media (min-width: 1024px) {
-	body{
-	position:relative;
-	width:50%;
-	height:50%;
-	margin: 0 auto;
-	background-image:url(../bilder/bckSS.jpg)
-}
-header, nav, main, footer{
-	display:block;
-}
-
-nav, main, footer{
-	display:block;
-	background-color:white;
-}
-
-header{
-	text-align:center;
-}
-
-nav{
-	display:block;
-	border-style:solid;
-	border-radius:20px;
-}
-
-nav ul{
-	display:inline-block;
-	list-style-type:none;
-}
-
-nav ul li{
-	margin:0 auto;
-	display:inline-block;
-	padding:10px;
-}
-
-nav ul li a{
-	text-decoration:none;
-}
-
-main{
-	border-style:solid;
-	border-radius:10px;
-	padding:10px;
-	margin:10px;
-}
-
-footer{
-	border-style:solid;
-	border-radius:10px;
-	padding:10px;
-	margin:10px;
-}
-}
-
-/* Media query for store skjermer */
-@media (min-width: 1920px) {
-
+    .pcnav {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    .mobilnav {
+        display: none;
+    }
+    .produktarticle:hover {
+        width: ;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+    }
 }

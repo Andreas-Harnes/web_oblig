@@ -1,197 +1,251 @@
-@media screen {
-    * {
-        font-family: sans-serif;
-        z-index: 10;
+    @media screen {
+        * {
+            font-family: sans-serif;
+            z-index: 10;
+        }
     }
-}
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: center;
-}
+    html {
+        background-color: #404040;
+    }
 
-#mainheader {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    font-size: 5em;
-    min-width: 200px;
-    width: 90%;
-    height: auto;
-    background-color: #e6e6e6;
-    margin: 0 auto;
-}
-
-.mainsection {
-    /*samleboks for de øverste artikklene på siden*/
-    width: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
-    background-color: #d9d9d9;
-    margin: 0 auto;
-    margin-bottom: 2em;
-}
-
-.produktsection {
-    /*samleboks for alle produktboksene*/
-    padding: 1em 0em 1em 0em;
-    align-items: stretch;
-    width: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
-    background-color: #d9d9d9;
-    margin: 0 auto;
-    margin-bottom: 2em;
-}
-
-h3 {
-    width: 100%;
-    text-transform: uppercase;
-    align-self: stretch;
-    padding: 0.5em 0.1em 0.5em 0.1em;
-    color: white;
-    text-align: center;
-    background: #999999;
-    margin: 0;
-}
-
-.mainarticle {
-    /*Øverste artikkel på siden */
-    margin-top: 0.5em;
-    width: 80%;
-    min-width: 17em;
-    max-width: 80em;
-}
-
-.produktarticle {
-    /*Alle produktbokser*/
-    margin-top: 0.5em;
-    width: 20%;
-    max-width: 28em;
-    min-width: 17em;
-    border-radius: 5px;
-    outline: 2px auto #cccccc;
-    background-color: #e6e6e6;
-    transition: box-shadow 0.5s;
-}
-
-#logo {}
-
-#logoliten {
-    max-width: 10rem;
-    width: 10%;
-    min-width: 5rem;
-}
-
-.bilde {
-    display: flex;
-    max-width: 20rem;
-    width: 10%;
-    min-width: 10rem;
-    margin: auto;
-}
-
-nav {
-    display: flex;
-    background: #999999;
-    padding: 0.01em;
-    margin-bottom: 1em;
-    height: 5em;
-}
-
-nav ul {
-    display: none;
-    min-width: 200px;
-    width: 90%;
-    padding: 0% 5% 0% 5%;
-}
-
-nav ul li {
-    display: inline;
-    list-style: none;
-    background-color: #737373;
-    color: white;
-    padding: 1em 2em;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1em;
-    cursor: pointer;
-    transition: box-shadow 0.2s;
-    text-transform: uppercase;
-}
-
-nav ul li:hover {
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 1em;
-    min-width: 200px;
-    width: 90%;
-    height: 10em;
-    background-color: #e6e6e6;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
-    outline: 2px auto #cccccc;
-    margin: 0 auto;
-}
-
-
-/* Media query for mobiler */
-
-@media (max-width: 768px) {
-    .mobilnav {
+    main {
         display: flex;
-        flex-wrap: nowrap;
+        flex-direction: column;
         justify-content: space-between;
+        align-content: center;
     }
-    .mobilnav li {
-        border-radius: 2px 2px 0px 0px;
-    }
-    .pcnav {
-        display: none;
-    }
-    #logo {
-        display: none;
-    }
-}
 
-@media (min-width: 768px) {
-    .pcnav {
+    #mainheader {
         display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
         align-items: center;
+        min-width: 200px;
+        width: 100%;
+        height: auto;
+        background-color: #666666;
+    }
+
+    .mainsection {
+        /*samleboks for de øverste artikklene på siden*/
+        padding: 1em 0em 1em 0em;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+        background-color: #d9d9d9;
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+
+    .produktsection {
+        /*samleboks for alle produktboksene*/
+        padding: 1em 0em 1em 0em;
+        align-items: stretch;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        justify-content: space-around;
+        align-content: space-around;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+        background-color: #d9d9d9;
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+
+    h3 {
+        width: 100%;
+        text-transform: uppercase;
+        align-self: stretch;
+        padding: 0.5em 0.1em 0.5em 0.1em;
+        color: white;
+        text-align: center;
+        background: #999999;
+        margin: 0;
+    }
+
+    .mainarticle {
+        /*Øverste artikkel på siden */
+        margin-top: 0.5em;
+        width: 80%;
+        min-width: 15em;
+        max-width: 80em;
+    }
+
+    .produktarticle {
+        /*Alle produktbokser*/
+        margin-top: 0.5em;
+        flex-grow: 1;
+        width: 20%;
+        max-width: 35em;
+        min-width: 15em;
+        border-radius: 5px;
+        outline: 2px auto #cccccc;
+        background-color: #e6e6e6;
+        transition: 0.8s;
+    }
+
+    .produktarticle h4 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    #logoliten {
+        max-width: 7em;
+        width: auto;
+        min-width: 5em;
+    }
+
+    .bilde {
+        display: flex;
+        max-width: 20rem;
+        width: 10%;
+        min-width: 10rem;
+        margin: auto;
+    }
+
+    nav {
+        display: flex;
+        background: #999999;
+        padding: 0.01em;
+        margin-bottom: 1em;
+        height: 5em;
+    }
+
+    nav ul {
+        display: none;
+        min-width: 200px;
+        width: 90%;
+        padding: 0% 5% 0% 5%;
+    }
+
+    nav ul li a {
+        display: flex;
+        background-color: #737373;
+        color: white;
+        height: auto;
+        padding: 1em 2em;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1em;
+        cursor: pointer;
+        transition: box-shadow 0.2s;
+        text-transform: uppercase;
+    }
+
+    nav ul li a:hover {
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    nav ul li {
+        color: white;
+        list-style: none;
+        text-decoration: none;
+        display: flex;
         flex-wrap: nowrap;
     }
-    #handlekurvpc {
-        display: flex;
-        justify-content: flex-end;
-    }
-    .mobilnav {
-        display: none;
-    }
-    .produktarticle:hover {
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
-    }
-    #logo {
-        display: flex;
-    }
-}
 
+    footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 100%;
+        min-width: 200px;
+        width: 90%;
+        height: auto;
+        background-color: #e6e6e6;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+        outline: 2px auto #cccccc;
+        margin: 0 auto;
+    }
+    /* Media query for mobiler */
 
-}
+    @media (max-width: 768px) {
+        .mobilnav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav ul li a {
+            border-radius: 2px;
+            padding: 0.5em 1em;
+        }
+        .pcnav {
+            display: none;
+        }
+        footer {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            justify-content: space-around;
+        }
+        #logo {
+            width: 15%;
+            max-width: 20em;
+            min-width: 7em;
+            margin-bottom: -5.5em;
+        }
+    }
+
+    @media (min-width:768px) and (max-width: 1920px) {
+        #logo {
+            width: 20%;
+            max-width: 20em;
+            min-width: 10em;
+        }
+        .pcnav {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        nav ul li a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 1;
+        }
+        #handlekurvpc {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .mobilnav {
+            display: none;
+        }
+        .produktarticle:hover {
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+            flex-grow: 20;
+        }
+    }
+
+    @media (min-width: 1920px) {
+        .pcnav {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        nav ul li a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 1;
+        }
+        #handlekurvpc {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .mobilnav {
+            display: none;
+        }
+        .produktarticle:hover {
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+            flex-grow: 20;
+        }
+        #logo {
+            width: 20%;
+            max-width: 20em;
+            min-width: 15em;
+            margin-bottom: -5.2em;
+        }
+    }

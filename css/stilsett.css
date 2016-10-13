@@ -77,15 +77,17 @@
 
     .produktarticle {
         /*Alle produktbokser*/
-        margin-top: 0.5em;
+        margin-top: 0.1em;
+        flex-shrink: 1;
         flex-grow: 1;
-        width: 20%;
-        max-width: 35em;
+        flex-basis: 15%;
+        max-width: 40em;
         min-width: 15em;
         border-radius: 5px;
         outline: 2px auto #cccccc;
         background-color: #e6e6e6;
         transition: 0.8s;
+        cursor: pointer;
     }
 
     .produktarticle h4 {
@@ -182,7 +184,7 @@
             padding: 0.5em 1em;
         }
         nav {
-            background-color: #737373;
+            background-color: #808080;
         }
         .pcnav {
             display: none;
@@ -194,7 +196,7 @@
         }
     }
 
-    @media (min-width:1024) and (max-width: 1920px) {
+    @media (min-width:1024px) and (max-width: 1920px) {
         #logomob {
             display: none;
         }

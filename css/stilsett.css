@@ -1,50 +1,66 @@
 @media screen {
     * {
         font-family: sans-serif;
+        z-index: 10;
     }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
 }
 
 #mainheader {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     font-size: 5em;
     min-width: 200px;
-    width: 100%;
+    width: 90%;
     height: auto;
     background-color: #e6e6e6;
-}
-
-.subheader {
-    position: relative;
-    display: block;
-    width: 100%;
     margin: 0 auto;
 }
 
 .mainsection {
     /*samleboks for de øverste artikklene på siden*/
-    margin-bottom: 1em;
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
     background-color: #d9d9d9;
+    margin: 0 auto;
+    margin-bottom: 2em;
 }
 
 .produktsection {
     /*samleboks for alle produktboksene*/
-    margin-bottom: 1em;
     padding: 1em 0em 1em 0em;
     align-items: stretch;
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-around;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
     background-color: #d9d9d9;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+h3 {
+    width: 100%;
+    text-transform: uppercase;
+    align-self: stretch;
+    padding: 0.5em 0.1em 0.5em 0.1em;
+    color: white;
+    text-align: center;
+    background: #999999;
+    margin: 0;
 }
 
 .mainarticle {
@@ -57,33 +73,41 @@
 
 .produktarticle {
     /*Alle produktbokser*/
-    flex: 1;
     margin-top: 0.5em;
-    width: 30%;
+    width: 20%;
     max-width: 28em;
     min-width: 17em;
     border-radius: 5px;
     outline: 2px auto #cccccc;
     background-color: #e6e6e6;
-    transition: width 1s, box-shadow 0.5s;
+    transition: box-shadow 0.5s;
 }
 
 #logo {
+    display: block;
     max-width: 20rem;
     min-width: 10rem;
     width: 30%;
 }
 
-#logo1 {
+#bakgrunn {
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#logoliten {
     max-width: 10rem;
     width: 10%;
     min-width: 5rem;
 }
 
-#bilde {
+.bilde {
     display: flex;
-    max-width: 15rem;
-    width: 15%;
+    max-width: 20rem;
+    width: 10%;
     min-width: 10rem;
     margin: auto;
 }
@@ -111,10 +135,10 @@ nav ul li {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    border-radius: 2px;
     font-size: 1em;
     cursor: pointer;
     transition: box-shadow 0.2s;
+    text-transform: uppercase;
 }
 
 nav ul li:hover {
@@ -128,13 +152,16 @@ nav ul li a {
 
 footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     font-size: 1em;
     min-width: 200px;
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height: 10em;
     background-color: #e6e6e6;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    outline: 2px auto #cccccc;
+    margin: 0 auto;
 }
 
 
@@ -146,6 +173,9 @@ footer {
         flex-wrap: nowrap;
         justify-content: space-between;
     }
+    .mobilnav li {
+        border-radius: 2px 2px 0px 0px;
+    }
     .pcnav {
         display: none;
     }
@@ -154,14 +184,20 @@ footer {
 @media (min-width: 768px) {
     .pcnav {
         display: flex;
+        align-items: center;
         flex-wrap: nowrap;
-        justify-content: space-around;
+    }
+    #handlekurvpc {
+        display: flex;
+        justify-content: flex-end;
     }
     .mobilnav {
         display: none;
     }
     .produktarticle:hover {
-        width: ;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
     }
+}
+
+
 }

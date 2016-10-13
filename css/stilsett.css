@@ -24,7 +24,7 @@
         min-width: 200px;
         width: 100%;
         height: auto;
-        background-color: #666666;
+        background-color: #808080;
     }
 
     .mainsection {
@@ -156,22 +156,33 @@
         min-width: 200px;
         width: 90%;
         height: auto;
-        background-color: #e6e6e6;
+        background-color: #d9d9d9;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
-        outline: 2px auto #cccccc;
         margin: 0 auto;
     }
     /* Media query for mobiler */
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         .mobilnav {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
+        #logomob {
+            display: flex;
+            width: 20%;
+            max-width: 6.5em;
+            min-width: 6.5em;
+        }
+        #mainheader {
+            display: none;
+        }
         nav ul li a {
             border-radius: 2px;
             padding: 0.5em 1em;
+        }
+        nav {
+            background-color: #737373;
         }
         .pcnav {
             display: none;
@@ -181,15 +192,12 @@
             flex-direction: column-reverse;
             justify-content: space-around;
         }
-        #logo {
-            width: 15%;
-            max-width: 20em;
-            min-width: 7em;
-            margin-bottom: -5.5em;
-        }
     }
 
-    @media (min-width:768px) and (max-width: 1920px) {
+    @media (min-width:1024) and (max-width: 1920px) {
+        #logomob {
+            display: none;
+        }
         #logo {
             width: 20%;
             max-width: 20em;
@@ -224,12 +232,21 @@
             display: flex;
             flex-wrap: nowrap;
         }
+        nav {
+            background: #999999;
+        }
+        #logomob {
+            display: none;
+        }
         nav ul li a {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             flex-shrink: 1;
+        }
+        #mainheader {
+            background: #666666;
         }
         #handlekurvpc {
             display: flex;

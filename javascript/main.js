@@ -1,10 +1,12 @@
 // Her kommer handlekurv funksjonaliteten til nettsiden
-
 // Variabler
 
 window.onload = oppstart;
-var handlekurv = [];
+
+//var handlekurv = [{Vare:" ", Pris:0}];
+var handlekurv = new Array;
 var teller = 0;
+
 function oppstart()
 {
 	document.getElementById("kjop1").onclick = kjop1;
@@ -19,17 +21,80 @@ function oppstart()
 	document.getElementById("kjop10").onclick = kjop10;
 	document.getElementById("kjop11").onclick = kjop11;
 	document.getElementById("kjop12").onclick = kjop12;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function kjop1()
 {
 	teller++;
 	document.getElementById("mHK").innerHTML = teller;
 	document.getElementById("mHK2").innerHTML = teller;
-	// tester at arrayen funker
-	handlekurv.push("IronSeries 431 Gaming")
-	console.log(handlekurv[0]);
+
+
+	if (localStorage.getItem("shoppingCartStorage") === null) {
+
+		handlekurv.push({Vare:"IronSeries 431 Gaming", Pris: 659});
+		sessionStorage.setItem("myShoppingCart",  JSON.stringify(handlekurv));
+
+	}
+	else {
+		var storedData = sessionStorage.getItem("shoppingCartStorage");
+		var handlekurv = JSON.parse(storedData);
+
+		handlekurv.push({Vare:"IronSeries 431 Gaming", Pris: 659});
+		sessionStorage.setItem("myShoppingCart",  JSON.stringify(handlekurv));
+
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function kjop2()
 {

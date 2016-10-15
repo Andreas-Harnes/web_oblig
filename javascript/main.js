@@ -7,7 +7,7 @@ var handlekurv = [];
 
 function oppstart()
 {
-	
+	document.getElementsByClassName("btnKjop").onclick = kjopet;
 }
 
 function kjopet()

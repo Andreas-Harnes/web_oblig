@@ -116,6 +116,13 @@
             min-height: 10em;
         }
 		
+		.utvalgt {
+			position:relative;
+            width:50%;
+			left:23%;
+			margin:0 auto;
+        }
+		
 		.btnKjop{
 			background-color: #778899; /* Green */
 			border: none;

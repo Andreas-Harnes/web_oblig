@@ -4,7 +4,7 @@
 window.onload = oppstart;
 
 //var handlekurv = [{Vare:" ", Pris:0}];
-var handlekurv = new Array;
+var handlekurv = {};
 var teller = 0;
 
 function oppstart()
@@ -49,7 +49,6 @@ function kjop1()
 
 
 	if (localStorage.getItem("shoppingCartStorage") === null) {
-
 		handlekurv.push({Vare:"IronSeries 431 Gaming", Pris: 659});
 		sessionStorage.setItem("myShoppingCart",  JSON.stringify(handlekurv));
 

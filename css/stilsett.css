@@ -7,6 +7,10 @@
             background-color: #404040;
         }
 
+        body {
+            margin: 0;
+        }
+
         main {
             z-index: 1;
             display: flex;
@@ -115,37 +119,40 @@
             margin: auto;
             min-height: 10em;
         }
-		
-		.utvalgt {
-			position:relative;
-            width:50%;
-			left:23%;
-			margin:0 auto;
+
+        .utvalgt {
+            position: relative;
+            width: 50%;
+            left: 23%;
+            margin: 0 auto;
         }
-		
-		.btnKjop{
-			background-color: #778899; /* Green */
-			border: none;
-			color: white;
-			padding: 5px 15px;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			font-size: 16px;
-			margin: 0 auto;
-		}
-		.btnKjop:hover{
-			background-color: #D3D3D3; /* Green */
-			border: none;
-			color: white;
-			padding: 5px 15px;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			font-size: 16px;
-			margin: 0 auto;
-			cursor:pointer;
-		}
+
+        .btnKjop {
+            background-color: #778899;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 5px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 0 auto;
+        }
+
+        .btnKjop:hover {
+            background-color: #D3D3D3;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 5px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 0 auto;
+            cursor: pointer;
+        }
 
         nav {
             display: flex;
@@ -260,7 +267,7 @@
                 justify-content: space-around;
                 height: 45em;
                 width: 50%;
-                margin: 6em 0em 0em -100em;
+                margin: -1em 0em 0em -100em;
                 padding: 1px;
                 background: #999999;
                 border-radius: 0em 2px 2px 0em;
@@ -270,7 +277,10 @@
                 transition: 1s;
             }
             #hambmeny:hover #slideinn {
-                margin-left: -3.79em;
+                margin-left: -4em;
+            }
+            #lukk:hover #slideinn {
+                margin-left: -100em;
             }
             #slideinn li {
                 display: flex;
@@ -283,14 +293,9 @@
                 align-items: center;
                 color: white;
                 text-transform: uppercase;
-                width: 90%;
+                width: 80%;
                 font-size: 2em;
                 height: 3em;
-            }
-            #lukk {
-                align-self: flex-end;
-                margin-right: 1em;
-                margin-bottom: -2em;
             }
             #logoslideinn {
                 width: 3em;

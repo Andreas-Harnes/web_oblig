@@ -1,11 +1,12 @@
 // Her kommer handlekurv funksjonaliteten til nettsiden
 // Variabler
+//var handlekurv = [{Vare:" ", Pris:0}];
+var handlekurv = [];
+//console.log(handlekurv);
+var teller = 0;
+var storedData;
 
 window.onload = oppstart;
-
-//var handlekurv = [{Vare:" ", Pris:0}];
-var handlekurv = {};
-var teller = 0;
 
 function oppstart()
 {
@@ -21,7 +22,7 @@ function oppstart()
 	document.getElementById("kjop10").onclick = kjop10;
 	document.getElementById("kjop11").onclick = kjop11;
 	document.getElementById("kjop12").onclick = kjop12;
-
+	//console.log(handlekurv);
 }
 
 
@@ -43,22 +44,27 @@ function oppstart()
 
 function kjop1()
 {
+	//Koden greier ikke å hente handlekruv i kjop funksjonen
+	//console.log(handlekurv);
 	teller++;
 	document.getElementById("mHK").innerHTML = teller;
 	document.getElementById("mHK2").innerHTML = teller;
 
+	console.log((localStorage.getItem("shoppingCartStorage")));
 
 	if (localStorage.getItem("shoppingCartStorage") === null) {
+		console.log(handlekurv);
 		handlekurv.push({Vare:"IronSeries 431 Gaming", Pris: 659});
-		sessionStorage.setItem("myShoppingCart",  JSON.stringify(handlekurv));
+
+		sessionStorage.setItem("shoppingCartStorage",  JSON.stringify(handlekurv));
 
 	}
 	else {
-		var storedData = sessionStorage.getItem("shoppingCartStorage");
-		var handlekurv = JSON.parse(storedData);
+		storedData = sessionStorage.getItem("shoppingCartStorage");
+		handlekurv = JSON.parse(storedData);
 
 		handlekurv.push({Vare:"IronSeries 431 Gaming", Pris: 659});
-		sessionStorage.setItem("myShoppingCart",  JSON.stringify(handlekurv));
+		sessionStorage.setItem("shoppingCartStorage",  JSON.stringify(handlekurv));
 
 	}
 }

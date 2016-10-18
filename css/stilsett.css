@@ -260,6 +260,7 @@
                 width: 20%;
                 max-width: 8em;
                 min-width: 6.5em;
+                margin-left: -60%;
             }
             #slideinn {
                 position: fixed;
